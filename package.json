@@ -2,10 +2,19 @@
   "name": "node-tuts",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "01-Globals.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhruv-Sood/node-tuts.git"
+  },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dhruv-Sood/node-tuts/issues"
+  },
+  "homepage": "https://github.com/Dhruv-Sood/node-tuts#readme"
 }
