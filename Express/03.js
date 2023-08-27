@@ -6,10 +6,7 @@ const {products} = require('./data.js')
 
 
 app.get('/',(req,res)=>{
-    res.json([
-      { name: "Dhruv Sood", age: 18 },
-      { name: "Abhimanyu Sood", age: 21 },
-    ]);
+    res.json(products);
 })
 
 app.listen(5173,()=>{
