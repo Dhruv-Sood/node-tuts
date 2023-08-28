@@ -34,6 +34,23 @@ app.get("/api/products/:productID", (req, res) => {
 });
 
 
+app.get('/api/v1/query',(req,res)=>{
+    const {search,limit} = req.query
+    let newProducts = [...products]
+    console.log(req.query);
+    if(search){
+        newProducts = newProducts.filter((product)=>{
+            return product.name.startsWith(search)
+        })
+        console.log(newProducts);
+    }
+    if(limit){
+        newProducts = newProducts.slice(0,limit)
+    }
+    res.json(newProducts)
+})
+
+
 app.listen(5173, () => {
   console.log(`Sever is running on port 5173`);
 });
