@@ -5,16 +5,18 @@ const app = express();
 // req => middleware => res
 
 const {logger} = require('./logger.js')
+const authorize  = require("./authorize.js");
+
+app.use([authorize, logger]);
 
 
-
-app.get('/',logger,(req,res)=>{
+app.get('/', (req,res)=>{
 
 
     res.send('Home Page')
 })
 
-app.get("/about", logger, (req, res) => {
+app.get("/about", (req, res) => {
   res.send("About Page");
 });
 
